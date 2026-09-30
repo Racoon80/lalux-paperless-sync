@@ -9,6 +9,8 @@ by one. This small Docker container does that for you: it checks easyAPP on a
 schedule and uploads every new document into your
 [Paperless-ngx](https://docs.paperless-ngx.com) archive, tagged and ready to search.
 
+<a href="https://www.buymeacoffee.com/dv7g" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-orange.png" alt="Buy me a coffee" height="41" width="174"></a>
+
 ```
  ┌──────────────┐   every 6 h (configurable)   ┌──────────────────────┐   REST API   ┌───────────────┐
  │ LALUX easyAPP│ ───────────────────────────▶ │ lalux-paperless-sync │ ───────────▶ │ Paperless-ngx │
@@ -46,6 +48,7 @@ schedule and uploads every new document into your
 - [Security](#security)
 - [FAQ](#faq)
 - [Development](#development)
+- [Support](#support)
 - [License](#license)
 
 ---
@@ -484,6 +487,14 @@ versioned images.
 
 Issues and pull requests are welcome. Please remove personal data such as contract
 numbers, licence plates and names from logs before posting them.
+
+## Support
+
+If this saves you some clicking every tax season, you can buy me a coffee:
+
+<a href="https://www.buymeacoffee.com/dv7g" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-orange.png" alt="Buy me a coffee" height="41" width="174"></a>
+
+Stars, issues and ideas are just as welcome.
 
 ## License
 
