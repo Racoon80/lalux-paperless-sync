@@ -1,0 +1,21 @@
+services:
+  lalux-paperless-sync:
+    image: ghcr.io/racoon80/lalux-paperless-sync:latest
+    # build: .
+    container_name: lalux-paperless-sync
+    restart: unless-stopped
+    environment:
+      PAPERLESS_URL: http://paperless:8000
+      PAPERLESS_TOKEN: ${PAPERLESS_TOKEN}
+      PAPERLESS_TAGS: LALUX
+      PAPERLESS_CORRESPONDENT: LALUX
+      # PAPERLESS_DOCUMENT_TYPE: Insurance
+      LALUX_USERNAME: ${LALUX_USERNAME}
+      LALUX_OTP_TYPE: SMS        # or EMAIL
+      LALUX_LANGUAGE: fr         # fr, de or en
+      LALUX_SOURCES: available,contracts,invoices
+      SYNC_INTERVAL: 21600       # seconds (6h)
+      SYNC_EXISTING: "true"      # false = only documents that appear after the first run
+      TZ: Europe/Luxembourg
+    volumes:
+      - ./data:/data
